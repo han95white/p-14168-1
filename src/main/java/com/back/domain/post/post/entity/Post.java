@@ -1,8 +1,19 @@
-package com.back.domain.post.post;
+package com.back.domain.post.post.entity;
 
-import jakarta.persistence.Column;
+import com.back.global.jpa.entity.BaseEntity;
+import jakarta.persistence.Entity;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@Entity
+@Getter
+@NoArgsConstructor
 public class Post extends BaseEntity {
     private String title;
-    @Column(columnDefinition = )
+    private String content;
+
+    public Post(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
