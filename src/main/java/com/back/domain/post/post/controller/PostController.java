@@ -52,10 +52,8 @@ public class PostController {
     ) {
         if (bindingResult.hasErrors()) return "post/post/write";
 
-        Post post = postService.write(form.getTitle(), form.getContent());
+        postService.write(form.getTitle(), form.getContent());
 
-        model.addAttribute("post", post);
-
-        return "post/post/writeDone";
+        return "redirect:/posts/write";
     }
 }
