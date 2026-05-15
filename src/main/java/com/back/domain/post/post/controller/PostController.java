@@ -26,6 +26,7 @@ public class PostController {
         return "커뮤니티 사이트 A";
     }
 
+
     @AllArgsConstructor
     @Getter
     public static class WriteForm {
